@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!--daisyUI CDN Link End Here-->
+    <link rel="stylesheet" href="style_css/style.css">
 
 </head>
 <body>
@@ -26,7 +27,7 @@
             <div id="check-box-circle-logo" class="flex items-center gap-14">
                 <div id="right-box" class="flex items-center justify-between">
                     <img class="mr-2 w-4" src="assets/checkbox.png" alt="">
-                    <span class="font-bold">23</span>
+                    <span id="number-three" class="font-bold">23</span>
                 </div>
                 <div id="right-logo">
                     <img src="assets/theme-btn.png" alt="">
@@ -52,7 +53,7 @@
                         </div>
                         <div class="ml-3">
                             <p>Task Assigned</p>
-                            <span class="font-bold">05</span>
+                            <span id="number-five" class="font-bold">06</span>
                         </div>
                     </div>
                     <div class="flex items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] text-white py-3 px-14 rounded-md font-bold">
@@ -81,7 +82,7 @@
                             <p>Deadline:</p>
                             <span class="font-semibold">21 March 2025</span>
                         </div>
-                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5">Completed</button>
+                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5 completed-btn">Completed</button>
                     </div>
                 </div>
                 <!--card section one end-->
@@ -95,7 +96,7 @@
                             <p>Deadline:</p>
                             <span class="font-semibold">21 March 2025</span>
                         </div>
-                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5">Completed</button>
+                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5 completed-btn">Completed</button>
                     </div>
                 </div>
                 <!--card section 2 end-->
@@ -109,7 +110,7 @@
                             <p>Deadline:</p>
                             <span class="font-semibold">21 March 2025</span>
                         </div>
-                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5">Completed</button>
+                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5 completed-btn">Completed</button>
                     </div>
                 </div>
                 <!--card section 3 end-->
@@ -123,7 +124,7 @@
                             <p>Deadline:</p>
                             <span class="font-semibold">21 March 2025</span>
                         </div>
-                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5">Completed</button>
+                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5 completed-btn">Completed</button>
                     </div>
                 </div>
                 <!--card section 4 end-->
@@ -137,7 +138,7 @@
                             <p>Deadline:</p>
                             <span class="font-semibold">21 March 2025</span>
                         </div>
-                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5">Completed</button>
+                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5 completed-btn">Completed</button>
                     </div>
                 </div>
                 <!--card section 5 end-->
@@ -151,7 +152,7 @@
                             <p>Deadline:</p>
                             <span class="font-semibold">21 March 2025</span>
                         </div>
-                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5">Completed</button>
+                        <button id="completed-button" class="bg-blue-600 text-white border-none rounded-md p-3 mt-3 text-sm py-2 px-5 completed-btn">Completed</button>
                     </div>
                 </div>
                 <!--card section 6 end-->
@@ -162,11 +163,15 @@
             <div class="bg-white p-5 rounded-md shadow-[0px_4px_6px_rgba(0,0,0,0.1)] text-center" id="activity-log">
                 <div class="flex justify-center mb-3 items-center">
                     <img class="w-4 h-4 mr-3" src="assets/activity.png" alt="">
-                    <h3 class="font-bold">Activity Log</h3>
+                    <h3 class="font-bold log-ac">Activity Log</h3>
                 </div>
-                <button id="clear-history" class="bg-blue-600 text-white border-none p-2 rounded-md mb-3 text-sm">Clear History</button>
-                <div class="bg-[#F1F3F9] p-3 my-1 rounded-md text-start font-semibold">You have completed the task "Add Dark Mode" at 12:48:15 PM</div>
-                <div id="log-item" class="bg-[#F1F3F9] p-3 my-1 rounded-md text-start font-semibold mt-2">You have completed the task "Add Light Mode" at 12:48:15 PM</div>
+                <button id="clear-history" class="bg-blue-600 text-white border-none p-2 rounded-md mb-3 text-sm history-clear">Clear History</button>
+                <div id="log-item-one" class="bg-[#F1F3F9] p-3 my-1 rounded-md text-start font-semibold hidden"><span id="clear-one">You have completed the task "Add Dark Mode" at 12:48:15 PM</span></div>
+                <div id="log-item" class="bg-[#F1F3F9] p-3 my-1 rounded-md text-start font-semibold mt-2 hidden"><span id="clear-two">You have completed the task "Add Light Mode" at 12:48:15 PM</span></div>
+                <div id="box-content-history">
+
+                </div>
+                
             </div>
             <!-- Activity Log End -->
         </div>
