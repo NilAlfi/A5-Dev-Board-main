@@ -71,3 +71,44 @@ document.getElementById("click-move")
     .addEventListener("mouseover", function() {
         this.style.cursor = "pointer";
     });
+
+
+    let zeroToPlus = 0;
+    const colors = ["#cd84f1", "#ffcccc", "#ffaf40", "#18dcff", "#17c0eb", "#B53471", "#7d5fff", "#fff200", "#833471", "#6F1E51"];
+    
+    document.getElementById("change-color").addEventListener("click", function() {
+        
+        for (const color of colors) {
+            if (zeroToPlus < color.length) {
+                document.body.style.backgroundColor = colors[zeroToPlus];
+                zeroToPlus = zeroToPlus + 1;
+            }
+            else{
+                console.log("background color")
+            }
+            
+            if (zeroToPlus >= color.length) {
+                zeroToPlus = 0;
+            }
+            else{
+                console.log("color")
+            }
+        }
+    });
+
+        document.getElementById("change-color")
+    .addEventListener("mouseover", function() {
+        this.style.cursor = "pointer";
+    });
+
+    function todayDateTime() {
+        const todayDate = document.getElementById("today-date");
+        const newDate = new Date();
+
+        const dayWeekMonthYear = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        const dateList = newDate.toLocaleDateString('en-US', dayWeekMonthYear);
+
+        todayDate.innerText = dateList;
+    }
+
+    todayDateTime();
