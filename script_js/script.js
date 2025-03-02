@@ -22,6 +22,7 @@ for(const completedBtn of completedButton){
         console.log("all are okay now");
     }
     
+
     completedBtn.setAttribute("disabled", true); 
     completedBtn.style.backgroundColor = "#d3d3d3";
 
@@ -38,8 +39,14 @@ historyItem.innerText = `You have completed the task: Fix mobile button issue at
 historyMakingNow.appendChild(historyItem);
     
     });
-
 };
+
+const mousePointer = document.querySelectorAll(".completed-btn");
+for(const mouseHover of mousePointer){
+    mouseHover.addEventListener("mouseover", function(){
+        this.style.cursor = "pointer"
+    })
+}
 
 
 const clearHistoryBtn = document.getElementById("clear-history");
@@ -48,8 +55,19 @@ clearHistoryBtn.addEventListener("click", function () {
     historyBox.innerHTML = "";
 });
 
+document.getElementById("clear-history")
+.addEventListener("mouseover", function() {
+    this.style.cursor = "pointer";
+});
+
 
 document.getElementById("click-move")
     .addEventListener("click", function(){
         window.location.href = "blog.html";
+    });
+
+
+    document.getElementById("click-move")
+    .addEventListener("mouseover", function() {
+        this.style.cursor = "pointer";
     });
