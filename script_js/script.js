@@ -47,3 +47,9 @@ clearHistoryBtn.addEventListener("click", function () {
     const historyBox = document.getElementById("box-content-history");
     historyBox.innerHTML = "";
 });
+
+
+document.getElementById("click-move")
+    .addEventListener("click", function(){
+        window.location.href = "blog.html";
+    });
